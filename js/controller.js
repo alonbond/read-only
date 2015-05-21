@@ -14,7 +14,9 @@ $('#main-field').on('keydown', function(event) {
 	var character = String.fromCharCode(event.keyCode).toLowerCase();
 
 	// getting te cursor position
-	var pos = $('#main-field').caret();
+	// var pos = $('#main-field').caret();
+	// var $field = $(this);
+	var pos = this.selectionStart;
 
 	// handling new character between 'a' and 'z' and the delete char.
 	if (((character >= 'a') && (character <= 'z')) || (event.which == 8) || (event.which == 32)) {
